@@ -154,6 +154,11 @@
 			.html(`<p>${d.date.slice(0,4)}</p><p>$ ${d.gdp} Billion</p>`);
 
 		})
+		.on("mousemove", ()=>{
+			tooltip
+			.style('top',`${event.pageY}px`)
+			.style('left',`${event.pageX}px`)
+		})
 		.on('mouseout',()=>{
 			tooltip
 			.style('visibility','hidden')
